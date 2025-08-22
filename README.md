@@ -7,3 +7,7 @@
 
 通过百度网盘分享的文件：采光计算器UI版.exe
 链接: https://pan.baidu.com/s/1bELGt8LxLYRl3BU-1Hn0KA?pwd=dpjv 提取码: dpjv
+
+## 程序截图
+
+<img width="1047" height="936" alt="image" src="https://github.com/user-attachments/assets/7e6a44a0-3792-43c9-b022-718cb84949f5" />

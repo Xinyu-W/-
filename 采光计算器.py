@@ -6,9 +6,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 import matplotlib
 
-# 设置中文字体
-matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 中文字体
-matplotlib.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
+
+matplotlib.rcParams['font.sans-serif'] = ['SimHei']
+matplotlib.rcParams['axes.unicode_minus'] = False  
 
 city_latitudes = {
     # 北京市
@@ -309,3 +309,4 @@ canvas = FigureCanvasTkAgg(fig, master=root)
 canvas.get_tk_widget().pack(pady=10)
 
 root.mainloop()
+

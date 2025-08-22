@@ -10,4 +10,4 @@
 
 ## 程序截图
 
-<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/7e6a44a0-3792-43c9-b022-718cb84949f5" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/7e6a44a0-3792-43c9-b022-718cb84949f5" />

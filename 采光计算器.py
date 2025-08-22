@@ -6,9 +6,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 import matplotlib
 
-
-matplotlib.rcParams['font.sans-serif'] = ['SimHei']
-matplotlib.rcParams['axes.unicode_minus'] = False  
+# 设置中文字体
+matplotlib.rcParams['font.sans-serif'] = ['SimHei']  # 中文字体
+matplotlib.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
 
 city_latitudes = {
     # 北京市
@@ -251,16 +251,10 @@ def calculate():
     winter_solstice_altitude = calculate_winter_solstice_altitude(city)
     louceng_last_day = louceng_list[-1]
     # 使用math.atan()并转换为角度
-    tan_value = height / loujianju
+    tan_value = height-(layer_hight * layer )/ loujianju
     angle_deg = math.degrees(math.atan(tan_value))
 
-    # 弹窗显示计算结果
-    result_text = f"全年采光分析结果：\n\n"
-    result_text += f"冬至日正午太阳高度角: {winter_solstice_altitude:.2f} 度\n"
-    result_text += f"全年都能采到光的最低楼层: {louceng_last_day:.2f} 层\n"
-    result_text += f"你买的楼层全年能采到光的天数: {count} 天\n"
-    result_text += f"你买的楼层全年采不到光的天数: {365 - count} 天"
-    messagebox.showinfo("计算结果", result_text)
+
 
     # 绘制全年采光情况图
     fig.clear()
@@ -276,6 +270,13 @@ def calculate():
 
     canvas.draw()
 
+    # 弹窗显示计算结果
+    result_text = f"全年采光分析结果：\n\n"
+    result_text += f"冬至日正午太阳高度角: {winter_solstice_altitude:.2f} 度\n"
+    result_text += f"全年都能采到光的最低楼层: {louceng_last_day:.2f} 层\n"
+    result_text += f"你买的楼层全年能采到光的天数: {count} 天\n"
+    result_text += f"你买的楼层全年采不到光的天数: {365 - count} 天"
+    messagebox.showinfo("计算结果", result_text)
 # ---------------------UI界面---------------------
 root = tk.Tk()
 root.title("全年楼层采光计算器")
@@ -309,4 +310,3 @@ canvas = FigureCanvasTkAgg(fig, master=root)
 canvas.get_tk_widget().pack(pady=10)
 
 root.mainloop()
-
